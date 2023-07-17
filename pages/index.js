@@ -56,14 +56,14 @@ export default IndexPage;
 const fetchPartners = mem(
 	async () => {
 		const response = await got(
-			`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries`,
+			`https://cdn.contentful.com/spaces/5w8azu253w2e/environments/master/entries`,
 			{
 				searchParams: {
 					content_type: 'partner',
 					order: 'fields.order',
 				},
 				headers: {
-					authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+					authorization: `Bearer If_HFFggWqHIKc16C5SHIGtLsItzFQrUa-RI02ynMTk`,
 				},
 				responseType: 'json',
 			},
@@ -104,7 +104,7 @@ const getPoster = (post, response) => {
 const fetchUpdates = mem(
 	async () => {
 		const response = await got(
-			`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries`,
+			`https://cdn.contentful.com/spaces/5w8azu253w2e/environments/master/entries`,
 			{
 				searchParams: {
 					content_type: 'blogPost',
@@ -112,7 +112,7 @@ const fetchUpdates = mem(
 					limit: 4,
 				},
 				headers: {
-					authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+					authorization: `Bearer If_HFFggWqHIKc16C5SHIGtLsItzFQrUa-RI02ynMTk`,
 				},
 				responseType: 'json',
 			},

@@ -43,14 +43,14 @@ export default PostPage;
 const fetchPosts = mem(
 	async () => {
 		const response = await got(
-			`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries`,
+			`https://cdn.contentful.com/spaces/5w8azu253w2e/environments/master/entries`,
 			{
 				searchParams: {
 					content_type: 'blogPost',
 					order: '-sys.createdAt',
 				},
 				headers: {
-					authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+					authorization: `Bearer If_HFFggWqHIKc16C5SHIGtLsItzFQrUa-RI02ynMTk`,
 				},
 				responseType: 'json',
 			},
