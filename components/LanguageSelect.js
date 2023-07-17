@@ -9,11 +9,12 @@ import itFlag from '../public/flag-it.png';
 import ltFlag from '../public/flag-lt.png';
 import deFlag from '../public/flag-de.png';
 import frFlag from '../public/flag-fr.png';
+import {useCallback} from "react";
 
 const LanguageSelect = () => {
 	const router = useRouter();
 
-	const changeLocale = React.useCallback(
+	const changeLocale = useCallback(
 		event => {
 			const locale = event.target.value;
 
